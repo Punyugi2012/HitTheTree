@@ -12,6 +12,7 @@
 		B845BFB52123000100FEAE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B845BFB32123000100FEAE28 /* Main.storyboard */; };
 		B845BFB72123000200FEAE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B845BFB62123000200FEAE28 /* Assets.xcassets */; };
 		B845BFBA2123000200FEAE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B845BFB82123000200FEAE28 /* LaunchScreen.storyboard */; };
+		B845BFC22123009A00FEAE28 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B845BFC12123009A00FEAE28 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B845BFB62123000200FEAE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B845BFB92123000200FEAE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B845BFBB2123000200FEAE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B845BFC12123009A00FEAE28 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		B845BFAC2123000100FEAE28 /* HitTheTree */ = {
 			isa = PBXGroup;
 			children = (
+				B845BFC12123009A00FEAE28 /* art.scnassets */,
 				B845BFAD2123000100FEAE28 /* AppDelegate.swift */,
 				B845BFB12123000100FEAE28 /* GameViewController.swift */,
 				B845BFB32123000100FEAE28 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B845BFBA2123000200FEAE28 /* LaunchScreen.storyboard in Resources */,
+				B845BFC22123009A00FEAE28 /* art.scnassets in Resources */,
 				B845BFB72123000200FEAE28 /* Assets.xcassets in Resources */,
 				B845BFB52123000100FEAE28 /* Main.storyboard in Resources */,
 			);
