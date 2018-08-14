@@ -7,14 +7,17 @@
 //
 
 import UIKit
-import QuartzCore
 import SceneKit
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        if let scnView = view as? SCNView {
+            let mainScene = SCNScene(named: "art.scnassets/mainScene.scn")
+            scnView.allowsCameraControl = true
+            scnView.scene = mainScene
+        }
     }
     
     override var shouldAutorotate: Bool {
