@@ -13,6 +13,11 @@
 		B845BFB72123000200FEAE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B845BFB62123000200FEAE28 /* Assets.xcassets */; };
 		B845BFBA2123000200FEAE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B845BFB82123000200FEAE28 /* LaunchScreen.storyboard */; };
 		B845BFC22123009A00FEAE28 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B845BFC12123009A00FEAE28 /* art.scnassets */; };
+		B845BFC8212405EE00FEAE28 /* MotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845BFC6212405EE00FEAE28 /* MotionHelper.swift */; };
+		B845BFC9212405EE00FEAE28 /* VectorOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845BFC7212405EE00FEAE28 /* VectorOperations.swift */; };
+		B845BFCE212405FE00FEAE28 /* chainsaw.wav in Resources */ = {isa = PBXBuildFile; fileRef = B845BFCB212405FE00FEAE28 /* chainsaw.wav */; };
+		B845BFCF212405FE00FEAE28 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = B845BFCC212405FE00FEAE28 /* jump.wav */; };
+		B845BFD0212405FE00FEAE28 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B845BFCD212405FE00FEAE28 /* background.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		B845BFB92123000200FEAE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B845BFBB2123000200FEAE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B845BFC12123009A00FEAE28 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		B845BFC6212405EE00FEAE28 /* MotionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionHelper.swift; sourceTree = "<group>"; };
+		B845BFC7212405EE00FEAE28 /* VectorOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOperations.swift; sourceTree = "<group>"; };
+		B845BFCB212405FE00FEAE28 /* chainsaw.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chainsaw.wav; sourceTree = "<group>"; };
+		B845BFCC212405FE00FEAE28 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		B845BFCD212405FE00FEAE28 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 		B845BFAC2123000100FEAE28 /* HitTheTree */ = {
 			isa = PBXGroup;
 			children = (
+				B845BFC5212405EE00FEAE28 /* Helper */,
+				B845BFCA212405FE00FEAE28 /* Sounds */,
 				B845BFC12123009A00FEAE28 /* art.scnassets */,
 				B845BFAD2123000100FEAE28 /* AppDelegate.swift */,
 				B845BFB12123000100FEAE28 /* GameViewController.swift */,
@@ -65,6 +77,25 @@
 				B845BFBB2123000200FEAE28 /* Info.plist */,
 			);
 			path = HitTheTree;
+			sourceTree = "<group>";
+		};
+		B845BFC5212405EE00FEAE28 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B845BFC6212405EE00FEAE28 /* MotionHelper.swift */,
+				B845BFC7212405EE00FEAE28 /* VectorOperations.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B845BFCA212405FE00FEAE28 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B845BFCB212405FE00FEAE28 /* chainsaw.wav */,
+				B845BFCC212405FE00FEAE28 /* jump.wav */,
+				B845BFCD212405FE00FEAE28 /* background.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +156,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B845BFCF212405FE00FEAE28 /* jump.wav in Resources */,
 				B845BFBA2123000200FEAE28 /* LaunchScreen.storyboard in Resources */,
 				B845BFC22123009A00FEAE28 /* art.scnassets in Resources */,
 				B845BFB72123000200FEAE28 /* Assets.xcassets in Resources */,
+				B845BFCE212405FE00FEAE28 /* chainsaw.wav in Resources */,
+				B845BFD0212405FE00FEAE28 /* background.mp3 in Resources */,
 				B845BFB52123000100FEAE28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B845BFC9212405EE00FEAE28 /* VectorOperations.swift in Sources */,
 				B845BFB22123000100FEAE28 /* GameViewController.swift in Sources */,
 				B845BFAE2123000100FEAE28 /* AppDelegate.swift in Sources */,
+				B845BFC8212405EE00FEAE28 /* MotionHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
