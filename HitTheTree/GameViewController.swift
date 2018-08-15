@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
             sounds["jump"] = jumpSound
         }
         if let backgroundSound = SCNAudioSource(fileNamed: "background.mp3") {
-            backgroundSound.volume = 0.3
+            backgroundSound.volume = 0.5
             backgroundSound.loops = true
             backgroundSound.load()
             let backgroundPlayer = SCNAudioPlayer(source: backgroundSound)
