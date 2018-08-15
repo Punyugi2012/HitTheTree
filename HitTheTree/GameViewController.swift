@@ -58,13 +58,7 @@ class GameViewController: UIViewController {
             sounds["saw"] = sawSound
             sounds["jump"] = jumpSound
         }
-        if let backgroundSound = SCNAudioSource(fileNamed: "background.mp3") {
-            backgroundSound.volume = 0.5
-            backgroundSound.loops = true
-            backgroundSound.load()
-            let backgroundPlayer = SCNAudioPlayer(source: backgroundSound)
-            ballNode?.addAudioPlayer(backgroundPlayer)
-        }
+        
     }
     
     @objc private func sceneViewTapped(recognizer: UITapGestureRecognizer) {
