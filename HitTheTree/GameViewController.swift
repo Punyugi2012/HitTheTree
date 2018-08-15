@@ -70,7 +70,6 @@ class GameViewController: UIViewController {
         let hitResults = mainView?.hitTest(location, options: nil)
         if let results = hitResults, let node = results.first?.node, node.name == "ball" {
             let jumpSound = sounds["jump"]!
-            print("working")
             ballNode?.runAction(SCNAction.playAudio(jumpSound, waitForCompletion: false))
             ballNode?.physicsBody?.applyForce(SCNVector3(0, 4, -2), asImpulse: true)
         }
