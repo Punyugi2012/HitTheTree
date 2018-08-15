@@ -22,9 +22,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNodes()
         setupScene()
         setupSounds()
+        setupNodes()
     }
     
     private func setupScene() {
@@ -32,6 +32,11 @@ class GameViewController: UIViewController {
         mainScene = SCNScene(named: "art.scnassets/mainScene.scn")
         mainView?.scene = mainScene
         mainView?.allowsCameraControl = true
+        
+        let tapRecog = UITapGestureRecognizer(target: self, action: #selector(sceneViewTapped(recognizer:)))
+        tapRecog.numberOfTapsRequired = 1
+        tapRecog.numberOfTouchesRequired = 1
+        mainView?.addGestureRecognizer(tapRecog)
     }
     
     private func setupNodes() {
@@ -60,13 +65,14 @@ class GameViewController: UIViewController {
         }
     }
     
-    private func sceneViewTapped(recognizer: UITapGestureRecognizer) {
+    @objc private func sceneViewTapped(recognizer: UITapGestureRecognizer) {
         let location = recognizer.location(in: mainView)
         let hitResults = mainView?.hitTest(location, options: nil)
         if let results = hitResults, let node = results.first?.node, node.name == "ball" {
             let jumpSound = sounds["jump"]!
+            print("working")
             ballNode?.runAction(SCNAction.playAudio(jumpSound, waitForCompletion: false))
-            ballNode?.physicsBody?.applyForce(SCNVector3(0, 5, -2), asImpulse: true)
+            ballNode?.physicsBody?.applyForce(SCNVector3(0, 4, -2), asImpulse: true)
         }
     }
     
